@@ -173,7 +173,7 @@
             if(isset($_POST["delname"])){
                 $sql_delete = "DELETE FROM country WHERE ID = '" . $_POST["delcc"] ."' ";
                 mysqli_query($conn, $sql_delete);
-                echo '<script type="text/javascript">;alert("Data Deleted.");window.location="pageCOUNTRY.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Deleted.");window.location="pageCOUNTRY.html";</script>';
                 $sql_delete -> free_result();
             }
 
@@ -181,7 +181,7 @@
             if(isset($_POST["subinname"])){
                 $sql_insert = "INSERT INTO country (Code, Name, Continent, Region, SurfaceArea, IndepYear, Population, LifeExpectancy, GNP, GNPold, LocalName, GovernmentType, StateHead, Capital, Code2) VALUES ("  . $_POST["incc"] . ", '" . $_POST["inname"] . "', '". $_POST["incon"] . "', '". $_POST["inreg"] . "', ". $_POST["insur"] . $_POST["inindep"] . ", '" . $_POST["inpop"] . "', '". $_POST["inlif"] . "', '". $_POST["ingnp"] . "', ". $_POST["ingnpo"] . $_POST["inlcl"] . ", '" . $_POST["ingov"] . "', '". $_POST["inhos"] . "', '". $_POST["incaps"] . "', ". $_POST["incc2"] . ")";
                 mysqli_query($conn, $sql_insert);
-                echo '<script type="text/javascript">;alert("Data Inserted.");window.location="pageCOUNTRY.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Inserted.");window.location="pageCOUNTRY.html";</script>';
                 $sql_insert -> free_result();
             }
 
@@ -190,7 +190,7 @@
             if(isset($_POST["upname"])){
                 $sql_update = "UPDATE country SET Code=" . $_POST["nupcc"] . ", Name=" . $_POST["nupname"] . ", Continent='" . $_POST["nupcon"]. "', Region='" . $_POST["nupreg"]. "', SurfaceArea='" . $_POST["nupsur"]. "', IndepYear='" . $_POST["nupindep"]. "', Population='" . $_POST["nuppop"]. "', LifeExectancy='" . $_POST["nuplif"]. "', GNP='" . $_POST["nupgnp"]. "', GNPold='" . $_POST["nupgnpo"]. "', LocalName='" . $_POST["nuplcl"]. "', GovernmentType='" . $_POST["nupgov"]. "', StateHead='" . $_POST["nuphos"]. "', Capital='" . $_POST["nupcaps"]. "', Code2='" . $_POST["nupcc2"]. "' WHERE ID=" . $_POST["oupcc"];
                 mysqli_query($conn, $sql_update);
-                echo '<script type="text/javascript">;alert("Data Updated.");window.location="pageCOUNTRY.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Updated.");window.location="pageCOUNTRY.html";</script>';
                 $sql_update -> free_result();
             }
 
