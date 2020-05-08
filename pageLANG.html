@@ -102,7 +102,7 @@
             if(isset($_POST["delname"])){
                 $sql_delete = "DELETE FROM countrylanguage WHERE CountryCode = '" . $_POST["delcc"] ."' ";
                 mysqli_query($conn, $sql_delete);
-                echo '<script type="text/javascript">;alert("Data Deleted.");window.location="pageLANG.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Deleted.");window.location="pageLANG.html";</script>';
                 $sql_delete -> free_result();
             }
 
@@ -110,7 +110,7 @@
             if(isset($_POST["inname"])){
                 $sql_insert = "INSERT INTO countrylanguage (CountryCode,Language,IsOfficial,Percentage) VALUES ('"  . $_POST["incc"] . "', '" . $_POST["inlang"] . "', '". $_POST["inoff"] . "', ". $_POST["inttl"] . ")";
                 mysqli_query($conn, $sql_insert);
-                echo '<script type="text/javascript">;alert("Data Inserted.");window.location="pageLANG.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Inserted.");window.location="pageLANG.html";</script>';
                 $sql_insert -> free_result();
             }
 
@@ -119,7 +119,7 @@
             if(isset($_POST["upname"])){
                 $sql_update = "UPDATE countrylanguage SET CountryCode=" . $_POST["nupcc"] . ", Language='" . $_POST["nuplang"]. "', IsOfficial='" . $_POST["nupoff"]. "', Percentage='" . $_POST["nupttl"]. "' WHERE CountryCode=" . $_POST["oupcc"];
                 mysqli_query($conn, $sql_update);
-                echo '<script type="text/javascript">;alert("Data Updated.");window.location="pageLANG.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Updated.");window.location="pageLANG.html";</script>';
                 $sql_update -> free_result();
             }
 
