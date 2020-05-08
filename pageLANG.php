@@ -9,7 +9,7 @@
     </head>
 
     <body style="background-color:#242222;">
-        <h1><a href="index.php">WORLD</a></h1>
+        <h1><a href="index.html">WORLD</a></h1>
         <h2>LANG Table</h2>
 
         <button onclick="opcl1()">INSERT</button>
