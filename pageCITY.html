@@ -111,7 +111,7 @@
             if(isset($_POST["delname"])){
                 $sql_delete = "DELETE FROM city WHERE ID = '" . $_POST["delid"] ."' AND CountryCode = '" . $_POST["delcc"] ."'";
                 mysqli_query($conn, $sql_delete);
-                echo '<script type="text/javascript">;alert("Data Deleted.");window.location="pageCITY.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Deleted.");window.location="pageCITY.html";</script>';
                 $sql_delete -> free_result();
             }
 
@@ -119,7 +119,7 @@
             if(isset($_POST["subinname"])){
                 $sql_insert = "INSERT INTO city (ID,Name,CountryCode,District,Population) VALUES ("  . $_POST["inid"] . ", '" . $_POST["inname"] . "', '". $_POST["incc"] . "', '". $_POST["indis"] . "', ". $_POST["inpop"] . ")";
                 mysqli_query($conn, $sql_insert);
-                echo '<script type="text/javascript">;alert("Data Inserted.");window.location="pageCITY.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Inserted.");window.location="pageCITY.html";</script>';
                 $sql_insert -> free_result();
             }
 
@@ -128,7 +128,7 @@
             if(isset($_POST["upname"])){
                 $sql_update = "UPDATE city SET ID=" . $_POST["nupid"] . ", Name=" . $_POST["nupname"] . ", CountryCode='" . $_POST["nupcc"]. "', District='" . $_POST["nupdis"]. "', Population='" . $_POST["nuppop"]. "' WHERE ID=" . $_POST["oupid"];
                 mysqli_query($conn, $sql_update);
-                echo '<script type="text/javascript">;alert("Data Updated.");window.location="pageCITY.php";</script>';
+                echo '<script type="text/javascript">;alert("Data Updated.");window.location="pageCITY.html";</script>';
                 $sql_update -> free_result();
             }
 
